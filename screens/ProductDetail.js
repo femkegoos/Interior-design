@@ -1,14 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
-import ProductCard from '../components/ProductCards';
 
 
-const HomeScreen = () => {
+const ProductDetail = () => {
   return (
     <View style={styles.container}>
       <Text>Dit is een componenet</Text>
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
     </View>
   );
 }
@@ -22,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default ProductDetail;
