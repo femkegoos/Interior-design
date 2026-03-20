@@ -1,12 +1,17 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const ProductCard = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.card}>
             <Image source={require("../img/Brown_chair_interior_design.jpg")} style={styles.image} />
             <Text style={styles.title}>Lounge chair</Text>
             <Text style={styles.description}>This is a description.</Text>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ProductDetail')}>
+                <Text style={styles.buttonText}>View Details</Text>
+            </TouchableOpacity>
         </View>
     );
 };
@@ -18,6 +23,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 8,
         marginBottom:16,
+        elevation: 5,
     },
     image: {
         width: "100%",
@@ -33,6 +39,18 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#555',
         marginTop: 4,
+    },
+    button: {
+        backgroundColor: '#007BFF',
+        padding: 10,
+        borderRadius: 5,
+        alignItems: 'center',
+        marginTop: 8,
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold',
     },
 });
 
