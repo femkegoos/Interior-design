@@ -40,8 +40,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 16,
   },
     image: {
         width: "100%",
@@ -79,7 +78,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#fff',
     },
-    quantityText: {
+    quantity: {
         fontSize: 18,
         marginHorizontal: 16,
     },
