@@ -9,6 +9,7 @@ const ProductCard = () => {
             <Image source={require("../img/Brown_chair_interior_design.jpg")} style={styles.image} />
             <Text style={styles.title}>Lounge chair</Text>
             <Text style={styles.description}>This is a description.</Text>
+            <Text style={styles.price}>€199,99</Text>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ProductDetail')}>
                 <Text style={styles.buttonText}>View Details</Text>
             </TouchableOpacity>
@@ -40,8 +41,14 @@ const styles = StyleSheet.create({
         color: '#555',
         marginTop: 4,
     },
+    price: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginTop: 4,
+        color: '#7a5a45',
+    },
     button: {
-        backgroundColor: '#007BFF',
+        backgroundColor: '#7a5a45',
         padding: 10,
         borderRadius: 5,
         alignItems: 'center',
