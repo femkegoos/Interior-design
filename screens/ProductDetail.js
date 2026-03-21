@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Button } from 'react-native';
 
 
 const ProductDetail = () => {
@@ -29,9 +29,7 @@ const ProductDetail = () => {
             </TouchableOpacity>
         </View>
         <Text style={styles.totalPrice}>Total: {199.99 * quantity}</Text>
-        <TouchableOpacity style={styles.addToCartButton}>
-            <Text style={styles.addToCartButtonText}>Add to Cart</Text>
-        </TouchableOpacity>
+        <Button title="Add to Cart" onPress={() => alert('Added to cart!')} style={styles.addToCartButton} />
     </ScrollView>
   );
 }
