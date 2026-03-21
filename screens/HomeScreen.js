@@ -1,16 +1,23 @@
-import { ScrollView, TextInput, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, TextInput, StyleSheet, Text, View, Switch } from 'react-native';
 import ProductCard from '../components/ProductCards';
+import { useState } from 'react';
+
 
 
 const HomeScreen = () => {
+    const[promotions, setPromotions] = useState(false);
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Shop</Text>
         <TextInput style={styles.searchInput} placeholder="Search for products..." />
+        <View style={styles.switchContainer}>
+            <Text>Show only the promotions</Text>
+            <Switch value={promotions} onValueChange={(value)=> setPromotions(value)} />
+        </View>
       <ProductCard />
       <ProductCard />
       <ProductCard />
-    </View>
+    </ScrollView>
   );
 }
 
@@ -19,7 +26,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    padding: 16,
+
   },
 
     searchInput: {
@@ -29,6 +37,7 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 16,
         width: '90%',
+        marginBottom: 64,
     },
     title: {
         marginTop: 64,
@@ -36,6 +45,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 16,
     },
+    switchContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 24,
+        justifyContent: 'space-between',
+        width: '90%',
+    }
 });
 
 export default HomeScreen;
