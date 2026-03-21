@@ -29,7 +29,7 @@ const ProductDetail = () => {
             </TouchableOpacity>
         </View>
         <Text style={styles.totalPrice}>Total: {199.99 * quantity}</Text>
-        <Button title="Add to Cart" onPress={() => alert('Added to cart!')} style={styles.addToCartButton} />
+        <Button title="Add to Cart" onPress={() => alert('Added to cart!')} color="#7a5a45" />
     </ScrollView>
   );
 }
@@ -83,13 +83,6 @@ const styles = StyleSheet.create({
     totalPrice: {
         fontSize: 18,
         fontWeight: 'bold',
-        marginTop: 16,
-    },
-    addToCartButton: {
-        backgroundColor: '#7a5a45',
-        paddingVertical: 16,
-        alignItems: 'center',
-        borderRadius: 5,
         marginTop: 16,
     },
     addToCartButtonText: {

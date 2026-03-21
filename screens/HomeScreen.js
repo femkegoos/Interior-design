@@ -12,7 +12,7 @@ const HomeScreen = () => {
         <TextInput style={styles.searchInput} placeholder="Search for products..." />
         <View style={styles.switchContainer}>
             <Text>Show only the promotions</Text>
-            <Switch value={promotions} onValueChange={(value)=> setPromotions(value)} />
+            <Switch value={promotions} onValueChange={(value)=> setPromotions(value)} trackColor={{ false: 'rgba(122, 90, 69, 0.1)', true: '#7a5a45' }} thumbColor={promotions ? '#fff' : '#fff'} />
         </View>
       <ProductCard />
       <ProductCard />
@@ -51,6 +51,11 @@ const styles = StyleSheet.create({
         marginBottom: 24,
         justifyContent: 'space-between',
         width: '90%',
+        borderColor: '#ccc',
+        borderWidth: 1,
+        borderRadius: 8,
+        padding: 10,
+        backgroundColor: 'rgba(122, 90, 69, 0.1)',
     }
 });
 
